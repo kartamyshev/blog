@@ -1,12 +1,12 @@
-import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Layout, { siteTitle } from "../../components/layout";
-import utilStyles from "../../styles/utils.module.css";
-import posts from "../../lib/posts";
-import styles from './posts.module.scss';
+import { GetStaticProps } from "next";
 
-import { formatDate } from "../../utils/formatDate";
+import Layout, { siteTitle } from "../components/layout";
+import posts from "../lib/posts";
+import { formatDate } from "../utils/formatDate";
+
+import styles from './index.module.scss';
 
 export const getStaticProps: GetStaticProps = () => {
   return {
@@ -22,7 +22,7 @@ interface Post {
   id: string;
 }
 
-export default function Posts({ posts }: { posts: Array<Post> }) {
+export default function Home({ posts }: { posts: Array<Post> }) {
   return (
     <Layout>
       <Head>
@@ -32,7 +32,7 @@ export default function Posts({ posts }: { posts: Array<Post> }) {
         {posts.map((post) => {
           return (
             <li key={post.id}>
-              <span className={styles.postMeta}>
+              <span className="post-meta">
                 {formatDate(post.date)}
               </span>
               <h2 className={styles.postLink}>
@@ -44,6 +44,6 @@ export default function Posts({ posts }: { posts: Array<Post> }) {
           );
         })}
       </ul>
-  </Layout>
+    </Layout>
   );
 }

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './header.module.scss';
 
 export default function Header() {
@@ -6,7 +7,9 @@ export default function Header() {
 
       <div className="wrapper">
 
-        <a className={styles.siteTitle} href="{{ site.baseurl }}/">Vanilla DOM</a>
+        <Link href='/'>
+          <a className={styles.siteTitle}>Vanilla DOM</a>
+        </Link>
 
         <nav className={styles.siteNav}>
           <a href="#" className={styles.menuIcon}>

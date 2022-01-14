@@ -26,3 +26,9 @@ img {
   max-width: 100%;
   display: block;
 } */
+
+.post-meta {
+  /* TODO: use variables */
+  font-size: calc(16px * 0.875);
+  color: #828282;
+}

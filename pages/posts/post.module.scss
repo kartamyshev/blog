@@ -1,8 +1,12 @@
-.post-header {
+@import '../../styles/variables';
+@import '../../styles/mixins';
+@import '../../styles/extends';
+
+.postHeader {
     margin-bottom: $spacing-unit;
 }
 
-.post-title {
+.postTitle {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
@@ -12,7 +16,7 @@
     }
 }
 
-.post-content {
+.postContent {
     margin-bottom: $spacing-unit;
 
     h2 {
@@ -54,24 +58,5 @@
 
     .line-through {
         text-decoration: line-through;
-    }
-}
-
-.history-back {
-    position: fixed;
-    top: 61px;
-    bottom: 0;
-    left: 0;
-    width: 30px;
-    background: rgba(0, 0, 0, .15);
-    cursor: pointer;
-    opacity: 0;
-    text-align: center;
-    line-height: 44px;
-    font-size: 20px;
-    -webkit-transition: opacity .2s linear;
-    transition: opacity .2s linear;
-    &:hover {
-        opacity: 1;
     }
 }

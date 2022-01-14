@@ -65,10 +65,6 @@
           text-align: left;
       }
   }
-
-  .history-back {
-      display: none;
-  }
 }
 
 @include media-query($on-palm) {
