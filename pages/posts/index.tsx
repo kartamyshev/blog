@@ -4,13 +4,14 @@ import Link from "next/link";
 import Layout, { siteTitle } from "../../components/layout";
 import utilStyles from "../../styles/utils.module.css";
 import posts from "../../lib/posts";
+import styles from './posts.module.scss';
 
 import { formatDate } from "../../utils/formatDate";
 
 export const getStaticProps: GetStaticProps = () => {
   return {
     props: {
-      posts: posts.getAll(),
+      posts: posts.getAllPublished(),
     },
   };
 };
@@ -27,28 +28,22 @@ export default function Posts({ posts }: { posts: Array<Post> }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-        <ul className={utilStyles.list}>
-          {posts.map((post) => {
-            return (
-              <li className={utilStyles.listItem} key={post.id}>
+      <ul className={styles.postList}>
+        {posts.map((post) => {
+          return (
+            <li key={post.id}>
+              <span className={styles.postMeta}>
+                {formatDate(post.date)}
+              </span>
+              <h2 className={styles.postLink}>
                 <Link href={`/posts/${post.id}`}>
                   <a>{post.title}</a>
                 </Link>
-                <br />
-                <small className={utilStyles.lightText}>
-                  {formatDate(post.date)}
-                </small>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-    </Layout>
+              </h2>
+            </li>
+          );
+        })}
+      </ul>
+  </Layout>
   );
 }

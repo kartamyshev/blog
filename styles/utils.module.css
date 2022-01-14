@@ -43,15 +43,6 @@
   margin: 0;
 }
 
-.listItem {
-  margin: 0 0 1.25rem;
-}
-
-.listItem.todoItem {
-  display: flex;
-  justify-content: space-between;
-}
-
 .lightText {
   color: #666;
 }

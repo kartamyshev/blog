@@ -1,0 +1,39 @@
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+a {
+    color: $brand-color;
+    text-decoration: none;
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+    &:hover {
+//        color: $text-color;
+        text-decoration: underline;
+    }
+}

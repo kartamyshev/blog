@@ -1,0 +1,24 @@
+@import '../../styles/variables';
+
+.postList {
+  margin-left: 0;
+  list-style: none;
+  h2 {
+      margin-bottom: 0;
+  }
+  > li {
+      padding: 15px 10px;
+      border: solid rgba(0, 0, 0, .1);
+      border-width: 0 0 1px;
+  }
+}
+
+.postMeta {
+  font-size: $small-font-size;
+  color: $grey-color;
+}
+
+.postLink {
+  display: block;
+  font-size: 24px;
+}
