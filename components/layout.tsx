@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import styles from "./layout.module.css";
 import Header from "./header";
+import Footer from "./Footer";
 
 export const siteTitle = "Next.js Sample Website";
 
@@ -33,6 +34,7 @@ export default function Layout({
       </Head>
       <Header />
       <main>{children}</main>
+      <Footer />
       {/* {!home && (
         <div className={styles.backToHome}>
           <a onClick={back}>← Back</a>

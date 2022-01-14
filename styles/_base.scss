@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./reset";
 @import "./mixins";
+@import "./extends";
 
 body {
     font-family: $base-font-family;
@@ -73,7 +74,7 @@ pre {
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
-    @extend %clearfix !optional;
+    @extend %clearfix;
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));

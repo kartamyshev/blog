@@ -1,0 +1,80 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+@import '../../styles/extends';
+
+.container {
+  border-top: 1px solid $grey-color-light;
+  padding: $spacing-unit 0;
+  //    background: #efefef;
+  //    box-shadow: 0 0 9px rgba(0, 0, 0, 0.1) inset;
+}
+
+.footerHeading {
+  font-size: 18px;
+  margin-bottom: $spacing-unit / 2;
+}
+
+.contactList,
+.socialMediaList {
+  list-style: none;
+  margin-left: 0;
+}
+
+.footerColWrapper {
+  font-size: 15px;
+  color: $grey-color;
+  margin-left: -$spacing-unit / 2;
+  @extend %clearfix;
+}
+
+.footerCol {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+}
+
+.footerCol1 {
+  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+  width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footerCol2 {
+  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+  width:         calc(20% - (#{$spacing-unit} / 2));
+}
+
+.footerCol3 {
+  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+  width:         calc(45% - (#{$spacing-unit} / 2));
+  .text {
+      text-align: right;
+  }
+}
+
+@include media-query($on-laptop) {
+  .footerCol1,
+  .footerCol2 {
+      width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+      width:         calc(50% - (#{$spacing-unit} / 2));
+  }
+
+  .footerCol3 {
+      width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+      width:         calc(100% - (#{$spacing-unit} / 2));
+      .text {
+          text-align: left;
+      }
+  }
+
+  .history-back {
+      display: none;
+  }
+}
+
+@include media-query($on-palm) {
+  .footerCol {
+      float: none;
+      width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+      width:         calc(100% - (#{$spacing-unit} / 2));
+  }
+}
