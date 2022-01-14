@@ -3,21 +3,16 @@ import styles from './footer.module.scss';
 export default function Footer() {
 	return (
 		<footer className={styles.container}>
-
       <div className="wrapper">
-
           <h2 className={styles.footerHeading}>Vanilla DOM</h2>
-
           <div className={styles.footerColWrapper}>
               <div className={`${styles.footerCol} ${styles.footerCol1}`}>
                   <ul className={styles.contactList}>
-                      <li><a href="mailto:{{ site.email }}">kartamyshev.k@gmail.com</a></li>
+                      <li><a href="mailto:kartamyshev.k@gmail.com">kartamyshev.k@gmail.com</a></li>
                   </ul>
               </div>
-
               <div className={`${styles.footerCol} ${styles.footerCol2}`}>
                   <ul className={styles.socialMediaList}>
-
                       <li>
                           <a href="https://github.com/kartamyshev">
                               <span className="icon icon--github">
@@ -37,12 +32,9 @@ export default function Footer() {
                                             5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path>
                                   </svg>
                               </span>
-
                               <span className="username">kartamyshev</span>
                           </a>
                       </li>
-
-
                       <li>
                           <a href="https://bitbucket.org/kartamyshev">
                               <span className="icon icon--bitbucket">
@@ -74,18 +66,13 @@ export default function Footer() {
                                       C17.059,13.097,18.03,14.073,18.027,15.284z"></path>
                                   </svg>
                               </span>
-
                               <span className="username">kartamyshev</span>
                           </a>
-
-
                       </li>
-
                   </ul>
               </div>
-
               <div className={`${styles.footerCol} ${styles.footerCol3}`}>
-                  <p className="text">
+                  <p className={styles.text}>
                       <a href="https://www.youtube.com/watch?v=0HlE_oRdROo">
                           Lovely music from footer
                       </a>
@@ -94,7 +81,6 @@ export default function Footer() {
           </div>
 
       </div>
-
     </footer>
 	)
 }

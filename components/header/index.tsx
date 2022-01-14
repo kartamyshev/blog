@@ -1,15 +1,23 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from './header.module.scss';
+import { siteTitle } from '../../pages';
 
 export default function Header() {
+  const router = useRouter();
+  const isRootPage = router.pathname === '/';
+
 	return (
 		<header className={styles.container}>
 
       <div className="wrapper">
-
-        <Link href='/'>
-          <a className={styles.siteTitle}>Vanilla DOM</a>
-        </Link>
+        {isRootPage ? (
+          <div className={styles.siteTitle}>{siteTitle}</div>
+        ) : (
+          <Link href='/'>
+            <a className={styles.siteTitle}>{siteTitle}</a>
+          </Link>
+        )}
 
         <nav className={styles.siteNav}>
           <a href="#" className={styles.menuIcon}>

@@ -1,12 +1,14 @@
+import { FC } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { GetStaticProps } from "next";
 
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import posts from "../lib/posts";
 import { formatDate } from "../utils/formatDate";
-
 import styles from './index.module.scss';
+
+export const siteTitle = "Vanilla DOM";
 
 export const getStaticProps: GetStaticProps = () => {
   return {
@@ -22,7 +24,7 @@ interface Post {
   id: string;
 }
 
-export default function Home({ posts }: { posts: Array<Post> }) {
+const Home: FC<{posts: Array<Post>}> = ({posts}) => {
   return (
     <Layout>
       <Head>
@@ -46,4 +48,11 @@ export default function Home({ posts }: { posts: Array<Post> }) {
       </ul>
     </Layout>
   );
-}
+};
+
+export default Home;
+
+// fix about page
+// fix all images
+// prettier
+// syntas highlighting

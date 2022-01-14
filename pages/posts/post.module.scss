@@ -3,6 +3,7 @@
 @import '../../styles/extends';
 
 .postHeader {
+    margin-top: calc($spacing-unit * 3);
     margin-bottom: $spacing-unit;
 }
 
