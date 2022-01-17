@@ -1,0 +1,112 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="description" content="Kartamyshev Konstantin blog"/><title>Быстрый старт нового приложения на React с использованием nwb</title><meta name="next-head-count" content="5"/><link rel="preload" href="/_next/static/css/f4a55ae880612fb9.css" as="style"/><link rel="stylesheet" href="/_next/static/css/f4a55ae880612fb9.css" data-n-g=""/><link rel="preload" href="/_next/static/css/81dc233c59e4b1d6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/81dc233c59e4b1d6.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-514908bffb652963.js" defer=""></script><script src="/_next/static/chunks/framework-6e4ba497ae0c8a3f.js" defer=""></script><script src="/_next/static/chunks/main-e47bb435dabe4202.js" defer=""></script><script src="/_next/static/chunks/pages/_app-8eca6f2fdcd9ab13.js" defer=""></script><script src="/_next/static/chunks/292-24465d8411e63962.js" defer=""></script><script src="/_next/static/chunks/pages/posts/%5Bid%5D-d5eed4a0dda78629.js" defer=""></script><script src="/_next/static/uz5BYBxPA0PBcb2gRDkVe/_buildManifest.js" defer=""></script><script src="/_next/static/uz5BYBxPA0PBcb2gRDkVe/_ssgManifest.js" defer=""></script><script src="/_next/static/uz5BYBxPA0PBcb2gRDkVe/_middlewareManifest.js" defer=""></script></head><body><div id="__next" data-reactroot=""><div class="layout_container__fbLkO"><div class="cover-bg"></div><header class="header_container__9bHJ_"><div class="wrapper"><a class="header_siteTitle__sV4Ql" href="/">Vanilla DOM</a><nav class="header_siteNav__NJkh2"><a href="#" class="header_menuIcon__ZWkz0"><svg viewBox="0 0 18 15"><path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"></path><path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path><path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"></path></svg></a></nav></div></header><main class="wrapper"><header class="post_postHeader___iJ4_"><h1 class="post_postTitle__wInhP">Быстрый старт нового приложения на React с использованием nwb</h1><p class="post-meta">Mar 19, 2016</p></header><article class="post_postContent__SaJf_"><p>Оригинал <a href="https://medium.com/@dtinth/quickly-start-a-new-react-application-using-nwb-334db59691d9#.kg7qhz6sj">здесь</a>.<br>
+<a href="https://habrahabr.ru/post/279513/">Перевод</a>.</p>
+<p>Написав несколько приложений на React, теперь уже довольно скучно каждый раз начинать всё сначала.
+Мне нужно настроить webpack, webpack-dev-server, Babel с некоторыми пресетами и плагинами, Karma, React,
+несколько лоадеров для JSON, CSS, картинок и шрифтов – и объединить всё это вместе.</p>
+<p>Альтернативой мог бы стать boilerplate, но многие из них содержат в себе кучу всего ненужного
+(роутер, Redux или сервер сайд рендеринг) и не покрывают некоторые нужные мне вещи
+(CSS-лоадеры, unit тестирование и т.д.). Не говоря уже о том, что разные проекты требуют различной конфигурации.</p>
+<p>Сегодня всё действительно быстро меняется и boilerplate устаревает достаточно быстро.
+После того, как вы создали приложение с использованием boilerplate, на вас ложится
+ответственность содержать все зависимости в актуальном состоянии. Я обновлял
+зависимости для нескольких проектов и это требует довольно много туповатой, повторяющейся работы.</p>
+<p>Теперь я предпочитаю использовать <a href="https://github.com/insin/nwb">nwb</a>.</p>
+<p><strong>Шаг 1</strong>. Устанавливаем nwb.</p>
+<p>{% highlight javascript %}
+$ npm install -g nwb
+{% endhighlight %}</p>
+<p><strong>Шаг 2</strong>. Используем команду nwb для создания нового приложения на React.</p>
+<p>{% highlight javascript %}
+$ nwb new react-app scoreboard
+{% endhighlight %}</p>
+<p><strong>Шаг 3</strong>. Заглядываем внутрь.</p>
+<p>{% highlight javascript %}
+$ cd scoreboard</p>
+<p>$ ls
+README.md     nwb.config.js   public   tests
+node_modules  package.json    src
+{% endhighlight %}</p>
+<p>Здесь нет ни <strong>webpack.config.js</strong>, ни <strong>.babelrc</strong> или <strong>karma.conf.js</strong>.
+Все настройки в <strong>nwb.config.js</strong>. Так что давайте посмотрим.</p>
+<p>{% highlight javascript %}
+$ cat nwb.config.js</p>
+<p>module.exports = { type: 'react-app' }
+{% endhighlight %}</p>
+<p>Конфигурация минимальна! Нам только нужно указать, что мы разрабатываем React-приложение
+и разумные настройки по умолчанию будут созданы.</p>
+<p><strong>package.json</strong></p>
+<p>{% highlight javascript %}
+$ cat package.json</p>
+<p>{
+"name": "scoreboard",
+"version": "1.0.0",
+"description": "Describe scoreboard here",
+"private": true,
+"scripts": {
+"build": "nwb build",
+"clean": "nwb clean",
+"start": "nwb serve",
+"test": "nwb test"
+},
+"dependencies": {
+"react": "0.14.x",
+"react-dom": "0.14.x"
+},
+"devDependencies": {
+"nwb": "0.7.x"
+},
+"author": "",
+"license": "MIT",
+"repository": ""
+}
+{% endhighlight %}</p>
+<p>Всё, что у нас в dependencies – это <strong>react</strong> и <strong>react-dom</strong>.<br>
+В devDependencies только <strong>nwb</strong>. Ни webpack, ни Karma или Babel – всё это менеджится nwb.
+Сам по себе nwb содержит много тестов, чтобы быть уверенным, что все эти вещи вместе работают согласованно.</p>
+<p>Шаг 4. Запускаем сервер.</p>
+<p>{% highlight javascript %}
+$ npm start -- --auto-install</p>
+<p>[...]
+nwb: serve-react-app
+nwb: dev server listening at http://localhost:3001
+webpack built a98e92c8c4d34bae8856 in 2791ms
+{% endhighlight %}</p>
+<p>Это запустит webpack-dev-server.<br>
+Попробуйте поменять файлы. Вы увидите, что webpack и Babel уже настроены для hot-reload React-компонентов.
+Попробуйте заимпортить какой-нибудь npm-модуль, например:</p>
+<p>{% highlight javascript %}
+import Rx from ‘rx’
+{% endhighlight %}</p>
+<p>Благодаря флагу <em>--auto-install</em> при сохранении файла установятся отсутствующие зависимости и добавятся в <strong>package.json</strong>.
+Создайте и заимпортите CSS-файл. Webpack уже сконфигурирован и содержит правильный loader и autoprefixer.
+Настройка всего этого вручную заняла бы много времени.</p>
+<p><strong>Шаг 5</strong>. Запускаем тесты.</p>
+<p>{% highlight javascript %}
+$ npm test -- --server --coverage</p>
+<p>[...]
+SUMMARY:
+√ 1 test completed
+{% endhighlight %}</p>
+<p>Это запустит Karma, интергрированную с webpack и измерением покрытия тестов.<br>
+С флагом <em>--server</em> тесты перезапускаются, когда вы сохраняете файл.<br>
+С флагом <em>--coverage</em> будет создан репорт. Вы можете установить плагин для редактора, чтобы видеть, какие строки покрыты тестами, а какие – нет.</p>
+<p>Наконец, запускаем</p>
+<p>{% highlight javascript %}
+$ npm run build
+{% endhighlight %}</p>
+<p>Данная команда сгенерирует статические ассеты. JavaScript и CSS из <strong>node_modules</strong> пойдут в <strong>vendor.js</strong>
+и <strong>vendor.css</strong>, тогда как код приложения – в <strong>app.js</strong> и <strong>app.css</strong>. Source maps создадутся в отдельном файле <strong>.map</strong>.
+Можете потом загрузить их на ваш вэб-сервер.</p>
+<p>Я использовал nwb в нескольких проектах.<br>
+<a href="https://medium.com/@dtinth/introducing-wonderstudio-db3d6755ca97#.k9jqztvus">wonderstudio</a> с более ранней версией nwb.<br>
+В то время как конфигурация в nwb несколько ограничена, хотя это работает на 90% из коробки,
+мне нужно сделать хотфикс, чтобы конфигурировать webpack так, как мне хочется.<br>
+Автор nwb выразил свои намерения в <a href="https://twitter.com/jbscript/status/704943199425568769">обеспечении большей гибкости в конфигурации</a>.</p>
+<p>Несколько последних написанных мной библиотек также используют nwb (например <a href="https://github.com/dtinth/redux-send">redux-send</a> и <a href="https://github.com/taskworld/ave">ave</a>).
+Он может генерировать UMD, CommonJS и ES6 версии модулей.</p>
+<p>Как видите, nwb можно использовать также для разработки, тестирования и
+билдов вэб-приложений и библиотек на чистом JS или React-компонентов.</p>
+<p>На момент написания nwb использует Babel 5, но мне предстоит ещё поискать инструмент,
+который настолько же хорошо выглядит и протестирован, как nwb. Встроенная поддержка
+unit-тестирования делает его для меня предпочительней других :D</p>
+</article></main><footer class="footer_container__lKLmx"><div class="wrapper"><h2 class="footer_footerHeading__31g7U">Vanilla DOM</h2><div class="footer_footerColWrapper__z58WP"><div class="footer_footerCol__2k2ax footer_footerCol1__B4QIf"><ul class="footer_contactList__MmfXw"><li><a href="mailto:kartamyshev.k@gmail.com">kartamyshev.k@gmail.com</a></li></ul></div><div class="footer_footerCol__2k2ax footer_footerCol2__mam6v"><ul class="footer_socialMediaList__8_BJA"><li><a href="https://github.com/kartamyshev"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388, 0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159, 0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481, 0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816, 0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049, 10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718, 3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659, 0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423, 1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0, 2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0, 1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028, 5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path></svg></span><span class="username">kartamyshev</span></a></li><li><a href="https://bitbucket.org/kartamyshev"><span class="icon icon--bitbucket"><svg viewBox="0 0 32 32"><path d="M29.208,3.519c-0.203-0.285-0.451-0.525-0.729-0.738c-0.61-0.475-1.297-0.814-2.01-1.102 c-1.516-0.611-3.097-0.971-4.701-1.229C19.81,0.137,17.836,0.012,15.762,0c-1.854,0.016-3.797,0.133-5.725,0.434 C8.668,0.649,7.316,0.94,6.002,1.385c-0.869,0.297-1.71,0.649-2.477,1.164C3.16,2.793,2.824,3.07,2.549,3.418 C2.205,3.856,2.058,4.344,2.147,4.897C2.32,5.989,2.48,7.082,2.66,8.169c0.264,1.611,0.537,3.222,0.811,4.828 c0.306,1.787,0.62,3.573,0.918,5.36c0.07,0.416,0.246,0.769,0.526,1.07c0.179,0.193,0.37,0.377,0.574,0.543 c0.73,0.59,1.562,1.01,2.432,1.354c2.082,0.83,4.259,1.205,6.485,1.328c1.616,0.09,3.23,0.033,4.838-0.187 c1.369-0.185,2.709-0.479,4.011-0.948c0.965-0.349,1.891-0.775,2.725-1.382c0.355-0.26,0.683-0.547,0.945-0.901 c0.181-0.238,0.305-0.504,0.354-0.805c0.397-2.341,0.809-4.679,1.196-7.021c0.362-2.172,0.701-4.346,1.058-6.518 C29.617,4.388,29.502,3.935,29.208,3.519z M15.82,19.64c-2.4-0.008-4.341-1.971-4.333-4.383c0.006-2.41,1.958-4.347,4.369-4.338 c2.425,0.008,4.359,1.961,4.35,4.387C20.195,17.704,18.227,19.648,15.82,19.64z M24.522,4.394 c-0.124,0.139-0.274,0.262-0.436,0.357c-0.45,0.268-0.951,0.409-1.454,0.541c-0.952,0.243-1.923,0.383-2.896,0.485 c-1.281,0.136-2.565,0.183-3.791,0.188c-1.49-0.008-2.914-0.068-4.332-0.238c-1.064-0.129-2.124-0.291-3.146-0.633 C8.164,4.99,7.869,4.858,7.584,4.713C7.438,4.641,7.309,4.528,7.198,4.409c-0.197-0.215-0.196-0.45,0.005-0.663 C7.32,3.621,7.463,3.514,7.61,3.43C8.034,3.184,8.5,3.041,8.969,2.918c0.983-0.256,1.985-0.402,2.994-0.509 c1.652-0.17,3.308-0.221,4.967-0.172c1.524,0.045,3.045,0.158,4.55,0.431c0.706,0.127,1.407,0.274,2.075,0.545 c0.236,0.096,0.463,0.217,0.683,0.346c0.109,0.064,0.208,0.164,0.288,0.266C24.668,4.007,24.674,4.222,24.522,4.394z M26.186,22.761c0.009,0.088-0.004,0.183-0.021,0.271c-0.305,1.604-0.614,3.205-0.911,4.811c-0.101,0.539-0.344,0.99-0.724,1.377 c-0.422,0.432-0.918,0.752-1.448,1.023c-0.979,0.498-2.018,0.811-3.085,1.031c-1.377,0.286-2.771,0.414-3.563,0.407 c-2.41-0.006-4.184-0.198-5.917-0.698c-0.802-0.23-1.577-0.529-2.3-0.953c-0.379-0.222-0.732-0.478-1.042-0.789 c-0.388-0.392-0.64-0.846-0.741-1.396c-0.296-1.604-0.609-3.207-0.915-4.81c-0.016-0.081-0.021-0.163-0.019-0.245 c0.019-0.394,0.37-0.597,0.724-0.423c0.036,0.021,0.072,0.041,0.105,0.063c1.174,0.853,2.484,1.423,3.858,1.856 c1.262,0.4,2.556,0.641,3.873,0.758c1.52,0.138,3.031,0.104,4.54-0.11c2-0.28,3.91-0.851,5.687-1.827 c0.354-0.194,0.686-0.43,1.025-0.646c0.056-0.035,0.108-0.076,0.167-0.104C25.819,22.206,26.153,22.395,26.186,22.761z M18.027,15.284c-0.005,1.203-0.992,2.184-2.197,2.178c-1.205-0.004-2.178-0.987-2.172-2.196c0.004-1.212,0.98-2.181,2.192-2.175 C17.059,13.097,18.03,14.073,18.027,15.284z"></path></svg></span><span class="username">kartamyshev</span></a></li></ul></div><div class="footer_footerCol__2k2ax footer_footerCol3___NGyQ"><p class="footer_text__v8yER"><a href="https://www.youtube.com/watch?v=0HlE_oRdROo">Lovely music from footer</a></p></div></div></div></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"id":20,"contentHTML":"\u003cp\u003eОригинал \u003ca href=\"https://medium.com/@dtinth/quickly-start-a-new-react-application-using-nwb-334db59691d9#.kg7qhz6sj\"\u003eздесь\u003c/a\u003e.\u003cbr\u003e\n\u003ca href=\"https://habrahabr.ru/post/279513/\"\u003eПеревод\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003eНаписав несколько приложений на React, теперь уже довольно скучно каждый раз начинать всё сначала.\nМне нужно настроить webpack, webpack-dev-server, Babel с некоторыми пресетами и плагинами, Karma, React,\nнесколько лоадеров для JSON, CSS, картинок и шрифтов – и объединить всё это вместе.\u003c/p\u003e\n\u003cp\u003eАльтернативой мог бы стать boilerplate, но многие из них содержат в себе кучу всего ненужного\n(роутер, Redux или сервер сайд рендеринг) и не покрывают некоторые нужные мне вещи\n(CSS-лоадеры, unit тестирование и т.д.). Не говоря уже о том, что разные проекты требуют различной конфигурации.\u003c/p\u003e\n\u003cp\u003eСегодня всё действительно быстро меняется и boilerplate устаревает достаточно быстро.\nПосле того, как вы создали приложение с использованием boilerplate, на вас ложится\nответственность содержать все зависимости в актуальном состоянии. Я обновлял\nзависимости для нескольких проектов и это требует довольно много туповатой, повторяющейся работы.\u003c/p\u003e\n\u003cp\u003eТеперь я предпочитаю использовать \u003ca href=\"https://github.com/insin/nwb\"\u003enwb\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eШаг 1\u003c/strong\u003e. Устанавливаем nwb.\u003c/p\u003e\n\u003cp\u003e{% highlight javascript %}\n$ npm install -g nwb\n{% endhighlight %}\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eШаг 2\u003c/strong\u003e. Используем команду nwb для создания нового приложения на React.\u003c/p\u003e\n\u003cp\u003e{% highlight javascript %}\n$ nwb new react-app scoreboard\n{% endhighlight %}\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eШаг 3\u003c/strong\u003e. Заглядываем внутрь.\u003c/p\u003e\n\u003cp\u003e{% highlight javascript %}\n$ cd scoreboard\u003c/p\u003e\n\u003cp\u003e$ ls\nREADME.md     nwb.config.js   public   tests\nnode_modules  package.json    src\n{% endhighlight %}\u003c/p\u003e\n\u003cp\u003eЗдесь нет ни \u003cstrong\u003ewebpack.config.js\u003c/strong\u003e, ни \u003cstrong\u003e.babelrc\u003c/strong\u003e или \u003cstrong\u003ekarma.conf.js\u003c/strong\u003e.\nВсе настройки в \u003cstrong\u003enwb.config.js\u003c/strong\u003e. Так что давайте посмотрим.\u003c/p\u003e\n\u003cp\u003e{% highlight javascript %}\n$ cat nwb.config.js\u003c/p\u003e\n\u003cp\u003emodule.exports = { type: 'react-app' }\n{% endhighlight %}\u003c/p\u003e\n\u003cp\u003eКонфигурация минимальна! Нам только нужно указать, что мы разрабатываем React-приложение\nи разумные настройки по умолчанию будут созданы.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003epackage.json\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e{% highlight javascript %}\n$ cat package.json\u003c/p\u003e\n\u003cp\u003e{\n\"name\": \"scoreboard\",\n\"version\": \"1.0.0\",\n\"description\": \"Describe scoreboard here\",\n\"private\": true,\n\"scripts\": {\n\"build\": \"nwb build\",\n\"clean\": \"nwb clean\",\n\"start\": \"nwb serve\",\n\"test\": \"nwb test\"\n},\n\"dependencies\": {\n\"react\": \"0.14.x\",\n\"react-dom\": \"0.14.x\"\n},\n\"devDependencies\": {\n\"nwb\": \"0.7.x\"\n},\n\"author\": \"\",\n\"license\": \"MIT\",\n\"repository\": \"\"\n}\n{% endhighlight %}\u003c/p\u003e\n\u003cp\u003eВсё, что у нас в dependencies – это \u003cstrong\u003ereact\u003c/strong\u003e и \u003cstrong\u003ereact-dom\u003c/strong\u003e.\u003cbr\u003e\nВ devDependencies только \u003cstrong\u003enwb\u003c/strong\u003e. Ни webpack, ни Karma или Babel – всё это менеджится nwb.\nСам по себе nwb содержит много тестов, чтобы быть уверенным, что все эти вещи вместе работают согласованно.\u003c/p\u003e\n\u003cp\u003eШаг 4. Запускаем сервер.\u003c/p\u003e\n\u003cp\u003e{% highlight javascript %}\n$ npm start -- --auto-install\u003c/p\u003e\n\u003cp\u003e[...]\nnwb: serve-react-app\nnwb: dev server listening at http://localhost:3001\nwebpack built a98e92c8c4d34bae8856 in 2791ms\n{% endhighlight %}\u003c/p\u003e\n\u003cp\u003eЭто запустит webpack-dev-server.\u003cbr\u003e\nПопробуйте поменять файлы. Вы увидите, что webpack и Babel уже настроены для hot-reload React-компонентов.\nПопробуйте заимпортить какой-нибудь npm-модуль, например:\u003c/p\u003e\n\u003cp\u003e{% highlight javascript %}\nimport Rx from ‘rx’\n{% endhighlight %}\u003c/p\u003e\n\u003cp\u003eБлагодаря флагу \u003cem\u003e--auto-install\u003c/em\u003e при сохранении файла установятся отсутствующие зависимости и добавятся в \u003cstrong\u003epackage.json\u003c/strong\u003e.\nСоздайте и заимпортите CSS-файл. Webpack уже сконфигурирован и содержит правильный loader и autoprefixer.\nНастройка всего этого вручную заняла бы много времени.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eШаг 5\u003c/strong\u003e. Запускаем тесты.\u003c/p\u003e\n\u003cp\u003e{% highlight javascript %}\n$ npm test -- --server --coverage\u003c/p\u003e\n\u003cp\u003e[...]\nSUMMARY:\n√ 1 test completed\n{% endhighlight %}\u003c/p\u003e\n\u003cp\u003eЭто запустит Karma, интергрированную с webpack и измерением покрытия тестов.\u003cbr\u003e\nС флагом \u003cem\u003e--server\u003c/em\u003e тесты перезапускаются, когда вы сохраняете файл.\u003cbr\u003e\nС флагом \u003cem\u003e--coverage\u003c/em\u003e будет создан репорт. Вы можете установить плагин для редактора, чтобы видеть, какие строки покрыты тестами, а какие – нет.\u003c/p\u003e\n\u003cp\u003eНаконец, запускаем\u003c/p\u003e\n\u003cp\u003e{% highlight javascript %}\n$ npm run build\n{% endhighlight %}\u003c/p\u003e\n\u003cp\u003eДанная команда сгенерирует статические ассеты. JavaScript и CSS из \u003cstrong\u003enode_modules\u003c/strong\u003e пойдут в \u003cstrong\u003evendor.js\u003c/strong\u003e\nи \u003cstrong\u003evendor.css\u003c/strong\u003e, тогда как код приложения – в \u003cstrong\u003eapp.js\u003c/strong\u003e и \u003cstrong\u003eapp.css\u003c/strong\u003e. Source maps создадутся в отдельном файле \u003cstrong\u003e.map\u003c/strong\u003e.\nМожете потом загрузить их на ваш вэб-сервер.\u003c/p\u003e\n\u003cp\u003eЯ использовал nwb в нескольких проектах.\u003cbr\u003e\n\u003ca href=\"https://medium.com/@dtinth/introducing-wonderstudio-db3d6755ca97#.k9jqztvus\"\u003ewonderstudio\u003c/a\u003e с более ранней версией nwb.\u003cbr\u003e\nВ то время как конфигурация в nwb несколько ограничена, хотя это работает на 90% из коробки,\nмне нужно сделать хотфикс, чтобы конфигурировать webpack так, как мне хочется.\u003cbr\u003e\nАвтор nwb выразил свои намерения в \u003ca href=\"https://twitter.com/jbscript/status/704943199425568769\"\u003eобеспечении большей гибкости в конфигурации\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003eНесколько последних написанных мной библиотек также используют nwb (например \u003ca href=\"https://github.com/dtinth/redux-send\"\u003eredux-send\u003c/a\u003e и \u003ca href=\"https://github.com/taskworld/ave\"\u003eave\u003c/a\u003e).\nОн может генерировать UMD, CommonJS и ES6 версии модулей.\u003c/p\u003e\n\u003cp\u003eКак видите, nwb можно использовать также для разработки, тестирования и\nбилдов вэб-приложений и библиотек на чистом JS или React-компонентов.\u003c/p\u003e\n\u003cp\u003eНа момент написания nwb использует Babel 5, но мне предстоит ещё поискать инструмент,\nкоторый настолько же хорошо выглядит и протестирован, как nwb. Встроенная поддержка\nunit-тестирования делает его для меня предпочительней других :D\u003c/p\u003e\n","title":"Быстрый старт нового приложения на React с использованием nwb","date":"2016-03-19 03:13:23"}},"__N_SSG":true},"page":"/posts/[id]","query":{"id":"20"},"buildId":"uz5BYBxPA0PBcb2gRDkVe","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
