@@ -55,4 +55,4 @@ export default Home;
 // fix about page
 // fix all images
 // prettier
-// syntas highlighting
+// syntax highlighting
