@@ -1,6 +1,7 @@
 ---
 id: 4
 title:  "LOL Javascript"
+published: false
 date:   "2014-12-18 18:39:08"
 ---
 
@@ -162,16 +163,16 @@ switch(42) {
 
 
 <div class="break-word">
-    Check out these links here: <br /> 
+    Check out these links here: <br />
     <a href="https://www.destroyallsoftware.com/talks/wat">https://www.destroyallsoftware.com/talks/wat</a><br />
-    <a href="http://www.phpied.com/files/location-location/location-location.html">http://www.phpied.com/files/location-location/location-location.html</a><br /> 
-    <a href="http://charlieharvey.org.uk/page/javascript_the_weird_parts">http://charlieharvey.org.uk/page/javascript_the_weird_parts</a><br /> 
-    <a href="http://wtfjs.com/">http://wtfjs.com/</a><br /> 
-    <a href="http://blog.mgechev.com/2013/02/22/javascript-the-weird-parts/">http://blog.mgechev.com/2013/02/22/javascript-the-weird-parts/</a><br /> 
-    <a href="https://www.youtube.com/watch?v=2pL28CcEijU">https://www.youtube.com/watch?v=2pL28CcEijU</a><br /> 
+    <a href="http://www.phpied.com/files/location-location/location-location.html">http://www.phpied.com/files/location-location/location-location.html</a><br />
+    <a href="http://charlieharvey.org.uk/page/javascript_the_weird_parts">http://charlieharvey.org.uk/page/javascript_the_weird_parts</a><br />
+    <a href="http://wtfjs.com/">http://wtfjs.com/</a><br />
+    <a href="http://blog.mgechev.com/2013/02/22/javascript-the-weird-parts/">http://blog.mgechev.com/2013/02/22/javascript-the-weird-parts/</a><br />
+    <a href="https://www.youtube.com/watch?v=2pL28CcEijU">https://www.youtube.com/watch?v=2pL28CcEijU</a><br />
 
 </div>
-And my goofy [presentation](http://kartamyshev.github.io/js-humor):  
+And my goofy [presentation](http://kartamyshev.github.io/js-humor):
 
-And...  
+And...
 `Love js )`
