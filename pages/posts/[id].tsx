@@ -1,5 +1,8 @@
+import { FC } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
+import ReactMarkdown from 'react-markdown';
+
 import Layout from "../../components/layout";
 import posts from "../../lib/posts";
 import { formatDate } from "../../utils/formatDate";
@@ -14,8 +17,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const post = await posts.getSinglePostById(params.id);
+export const getStaticProps: GetStaticProps = ({ params }) => {
+  const post = posts.getSinglePostById(params.id);
 
   return {
     props: {
@@ -24,7 +27,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default function Post({ post }) {
+interface Post {
+  contentHTML: string;
+  date: Date;
+  id: number;
+  published: boolean
+  title: string;
+}
+
+const Post: FC<{post: Post}> = ({ post }) => {
   const { date, title, contentHTML } = post;
   const formattedDate = formatDate(date);
 
@@ -37,7 +48,11 @@ export default function Post({ post }) {
         <h1 className={styles.postTitle}>{title}</h1>
         <p className="post-meta">{formattedDate}</p>
       </header>
-      <article className={styles.postContent} dangerouslySetInnerHTML={{__html: contentHTML}} />
+      <article className={styles.postContent}>
+        <ReactMarkdown children={contentHTML} />
+      </article>
     </Layout>
   );
 }
+
+export default Post;

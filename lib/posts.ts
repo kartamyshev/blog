@@ -1,18 +1,16 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import {remark} from "remark";
-import html from "remark-html";
 
-const postsDirectory = path.join(process.cwd(), "posts");
-const normalizeFileName = (fileName) => fileName.replace(/\.md$/, "");
+const postsDirectory: string = path.join(process.cwd(), "posts");
+const normalizeFileName = (name: string): string => name.replace(/\.md$/, "");
 const fileNames: string[] = fs.readdirSync(postsDirectory);
 
 interface IPosts {}
 
-interface Post {
+interface PostDto {
   name: string;
-  id: number;
+  id: string;
   title: string;
   published?: boolean;
   date: Date;
@@ -22,24 +20,24 @@ class Posts implements IPosts {
   public filesMetaInfo = fileNames.map((name) => {
     const fullPath: string = path.join(postsDirectory, name);
     const fileContents: string = fs.readFileSync(fullPath, "utf8");
-    const {data} = matter(fileContents);
+    const matterResult = matter(fileContents);
 
     return {
-      id: String(data.id), // must be string when used as static page param
+      id: String(matterResult.data.id), // must be string when used as static page param
       name, // used to map id to actual file to load
     };
   });
 
-  public getAll() {
+  public getAll(): PostDto[] {
     return fileNames
       .map<any>((name) => {
         const fullPath: string = path.join(postsDirectory, name);
         const fileContents: string = fs.readFileSync(fullPath, "utf8");
-        const {data} = matter(fileContents);
+        const matterResult = matter(fileContents);
 
         return {
           name: normalizeFileName(name),
-          ...data,
+          ...matterResult.data,
         };
       })
       .sort(({ date: a }, { date: b }) => {
@@ -47,7 +45,7 @@ class Posts implements IPosts {
       });
   }
 
-  public getAllPublished() {
+  public getAllPublished(): PostDto[] {
     return this.getAll().filter(file => file.published !== false);
   }
 
@@ -55,23 +53,18 @@ class Posts implements IPosts {
     return this.filesMetaInfo.map((post) => ({ params: { ...post } }));
   }
 
-  public getSinglePostById = async (id) => {
+  public getSinglePostById = (id) => {
     const file = this.filesMetaInfo.find((post) => post.id === id);
 
     const fullPath = path.join(postsDirectory, file.name);
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
-    const matterResult = matter(fileContents);
-    const proecssedContent = await remark()
-      .use(html)
-      .process(matterResult.content);
-
-    const contentHTML = proecssedContent.toString();
+    const {content, data} = matter(fileContents);
 
     return {
       id,
-      contentHTML,
-      ...matterResult.data,
+      contentHTML: content,
+      ...data,
     };
   };
 }

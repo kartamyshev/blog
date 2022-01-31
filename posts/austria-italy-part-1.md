@@ -52,6 +52,3 @@ date:   "2015-09-12 10:18:16"
 <img src="{{ site.url }}/_site/assets/austria-italy/13.jpg">
 
 <img src="{{ site.url }}/_site/assets/austria-italy/14.jpg">
-
-
-***
