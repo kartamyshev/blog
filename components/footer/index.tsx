@@ -15,7 +15,7 @@ export default function Footer() {
                   <ul className={styles.socialMediaList}>
                       <li>
                           <a href="https://github.com/kartamyshev">
-                              <span className="icon icon--github">
+                              <span className={styles.icon}>
                                   <svg viewBox="0 0 16 16">
                                       <path
                                               d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,
@@ -35,9 +35,41 @@ export default function Footer() {
                               <span className="username">kartamyshev</span>
                           </a>
                       </li>
-                      <li>
-                          <a href="https://bitbucket.org/kartamyshev">
-                              <span className="icon icon--bitbucket">
+                      {/* <li>
+                          <a href="https://medium.com/@kartamyshev">
+                              <span className={styles.icon}>
+                                  <svg
+                                    height="100%"
+                                    // style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"
+                                    version="1.1"
+                                    viewBox="0 0 24 24"
+                                    width="100%"
+                                  >
+                                    <rect
+                                      height="24"
+                                      id="Artboard12"
+                                      fill='none'
+                                      // style="fill:none;"
+                                      width="24"
+                                      x="0"
+                                      y="0"
+                                    />
+                                        <g>
+                                          <rect height="20" width="20" x="2" y="2"/>
+                                          <path
+                                            // style="fill: #fff;"
+                                            fill='#fff'
+                                            d="M18.602,6.448l-3.698,0l-2.631,6.621l-2.99,-6.621l-3.951,0l0,0.329l1.392,1.701l-0.019,6.57l-1.376,1.878l0.003,0.311l3.886,0l0.01,-0.286l-1.628,-1.903l0.043,-5.317l3.433,7.506l0.414,0l3.049,-7.684l0,6.25l-1.25,1.182l0,0.252l5.313,0l0,-0.302l-1.218,-1.155l-0.017,-7.946l1.235,-1.055l0,-0.331Z"
+                                          />
+                                        </g>
+                                      </svg>
+                              </span>
+                              <span className="username">medium</span>
+                          </a>
+                      </li> */}
+                      {/* <li>
+                          <a href="https://www.linkedin.com/in/konstantin-kartamyshev/">
+                              <span className={styles.icon}>
                                   <svg viewBox="0 0 32 32">
                                       <path d="M29.208,3.519c-0.203-0.285-0.451-0.525-0.729-0.738c-0.61-0.475-1.297-0.814-2.01-1.102
                                       c-1.516-0.611-3.097-0.971-4.701-1.229C19.81,0.137,17.836,0.012,15.762,0c-1.854,0.016-3.797,0.133-5.725,0.434
@@ -66,9 +98,9 @@ export default function Footer() {
                                       C17.059,13.097,18.03,14.073,18.027,15.284z"></path>
                                   </svg>
                               </span>
-                              <span className="username">kartamyshev</span>
+                              <span className="username">linkedin</span>
                           </a>
-                      </li>
+                      </li> */}
                   </ul>
               </div>
               <div className={`${styles.footerCol} ${styles.footerCol3}`}>
@@ -84,3 +116,6 @@ export default function Footer() {
     </footer>
 	)
 }
+
+
+// https://www.facebook.com/konstantin.kartamyshev

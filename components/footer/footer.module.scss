@@ -74,3 +74,16 @@
       width:         calc(100% - (#{$spacing-unit} / 2));
   }
 }
+
+.icon {
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+  > svg {
+      width: 16px;
+      height: 16px;
+      path {
+          fill: $grey-color;
+      }
+  }
+}
