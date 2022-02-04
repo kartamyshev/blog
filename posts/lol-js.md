@@ -160,8 +160,6 @@ switch(42) {
 // oops
 ```
 
-
-
 Check out these links here:  
 [https://www.destroyallsoftware.com/talks/wat](https://www.destroyallsoftware.com/talks/wat)  
 [http://www.phpied.com/files/location-location/location-location.html](http://www.phpied.com/files/location-location/location-location.html)  

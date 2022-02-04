@@ -4,7 +4,7 @@ title:  "\"Чёрт, парень, может, это и есть ад? Цела
 date:   "2015-01-16 01:16:20"
 ---
 
-<img src="{{ site.url }}/_site/assets/belgium/11.jpg">
+![11](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/11.jpg?raw=true)
 
 Когда я думаю об Остенде, я вспоминаю две важные вещи - то, что мне говорили о нём перед поездкой и то, что 
 я почувствовал за несколько часов пребывания там. Романтика моря для сентиментального человека, который последний 
@@ -12,28 +12,28 @@ date:   "2015-01-16 01:16:20"
 
 Нереальное количество велосипедов, впрочем, как в любом другом городе.
 
-<img src="{{ site.url }}/_site/assets/belgium/12.jpg">
+![12](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/12.jpg?raw=true)
 
 Город находится всего в 20 минутах езды на поезде от Брюгге. По сути - ничем не примечательный, кроме 
 курортного статуса (это то, каким я его себе представлял до того, как увидел).
 
 На этой фотографии, по-моему очень неплохо передано "предчувствие".
 
-<img src="{{ site.url }}/_site/assets/belgium/13.jpg">
+![13](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/13.jpg?raw=true)
 
 Морской воздух, какое-то нереальное чувство того, что увиденное поразит воображение. Я получил именно то, чего и ожидал.
 Именно то, на что настраивался. Свобода мыслей, полёт фантазии и эйфория. Я наверно болен.  
 Понимание того, что дальше ничего нет, кроме островов, перевернуло всё с ног на голову.
 
-<img src="{{ site.url }}/_site/assets/belgium/14.jpg">
+![14](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/14.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/belgium/15.jpg">
+![15](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/15.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/belgium/16.jpg">
+![16](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/16.jpg?raw=true)
 
 И я начал прыгать.
 
-<img src="{{ site.url }}/_site/assets/belgium/17.jpg">
+![17](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/17.jpg?raw=true)
 
 У меня сел телефон и я попросил друзей фотографировать прыгающего себя ещё. После того, как закончил, мы начали собирать 
 ракушки и просто наслаждались видом и воздухом.
@@ -46,11 +46,9 @@ date:   "2015-01-16 01:16:20"
 
 Человек, который портит фотографии.
 
-<img src="{{ site.url }}/_site/assets/belgium/18.jpg">
+![18](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/18.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/belgium/19.jpg">
-
-
+![19](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/19.jpg?raw=true)
 
 ***
 
@@ -67,22 +65,17 @@ date:   "2015-01-16 01:16:20"
 
 Гент - ты потрясающий! Спасибо тебе.
 
-<img src="{{ site.url }}/_site/assets/belgium/20.jpg">
+![20](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/20.jpg?raw=true)
 
+![21](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/21.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/belgium/21.jpg">
+![22](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/22.jpg?raw=true)
 
+![23](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/23.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/belgium/22.jpg">
+![24](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/24.jpg?raw=true)
 
-
-<img src="{{ site.url }}/_site/assets/belgium/23.jpg">
-
-
-<img src="{{ site.url }}/_site/assets/belgium/24.jpg">
-
-
-<img src="{{ site.url }}/_site/assets/belgium/25.jpg">
+![25](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/25.jpg?raw=true)
 
 Что это, если не сказка?
 

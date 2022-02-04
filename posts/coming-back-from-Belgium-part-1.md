@@ -24,7 +24,7 @@ date:   "2015-01-14 21:33:45"
 фламандский городок. Настолько впечатлил, что вот такой странный был у нас вид 
 за несколько часов до нового года. 
 
-<img src="{{ site.url }}/_site/assets/belgium/1.jpg">
+![1](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/1.jpg?raw=true)
 
 Ну и, естественно, я был очень рад увидеться с друзьями.
 
@@ -50,15 +50,15 @@ date:   "2015-01-14 21:33:45"
 на архитектуру, которая сочетает в себе готичные здания, перемешанные современными офисными постройками, ну и, конечно, 
 шикарный дневной и вечерний новогодний центр города.
 
-<img src="{{ site.url }}/_site/assets/belgium/2.jpg">
+![2](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/2.jpg?raw=true)
 
 В одном из магазинов видели даже вот такое:
 
-<img src="{{ site.url }}/_site/assets/belgium/3.jpg">
+![3](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/3.jpg?raw=true)
 
 кинули по монетке и запечатлили себя на гламурненьком селфи.
 
-<img src="{{ site.url }}/_site/assets/belgium/4.jpg">
+![4](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/4.jpg?raw=true)
 
 На следующий день поехали в Брюгге. Ехать от Брюсселя 1 час 20 минут. Поезда комфортные, время прошло быстро.
 
@@ -67,23 +67,23 @@ date:   "2015-01-14 21:33:45"
 Брюгге... Что же про тебя рассказать-то, а? Может быть тебя показать?  
 Вид недалеко от отеля:
 
-<img src="{{ site.url }}/_site/assets/belgium/5.jpg">
+![5](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/5.jpg?raw=true)
 
 А вот и башня, с которой упал бедняга-киллер:
 
-<img src="{{ site.url }}/_site/assets/belgium/6.jpg">
+![6](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/6.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/belgium/7.jpg">
+![7](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/7.jpg?raw=true)
 
 "Пряничные" домики:
 
-<img src="{{ site.url }}/_site/assets/belgium/8.jpg">
+![8](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/8.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/belgium/9.jpg">
+![9](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/9.jpg?raw=true)
 
 Ночная улица:
 
-<img src="{{ site.url }}/_site/assets/belgium/10.jpg">
+![10](https://github.com/kartamyshev/blog/blob/master/public/images/belgium/10.jpg?raw=true)
 
 ---
 

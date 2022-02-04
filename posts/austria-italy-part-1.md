@@ -15,40 +15,40 @@ date:   "2015-09-12 10:18:16"
 современного искусства, вино каждый вечер, безумное количество забегаловок,
 где, как правило вкусно готовят. Зелёные парковые зоны. Мужчина, играющий с закрытыми глазами на бутылках.
 
-<img src="{{ site.url }}/_site/assets/austria-italy/2.jpg">
+![2](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/2.jpg?raw=true)
 
 Памятники, дома, здания, опять памятники...
 
-<img src="{{ site.url }}/_site/assets/austria-italy/3.jpg">
+![3](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/3.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/austria-italy/4.jpg">
+![4](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/4.jpg?raw=true)
 
 Постоянное уличное нечто.
 
-<img src="{{ site.url }}/_site/assets/austria-italy/5.jpg">
+![5](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/5.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/austria-italy/6.jpg">
+![6](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/6.jpg?raw=true)
 
 Соборы, которые бесполезно пытаться помещать в объектив обычного телефона.
 
-<img src="{{ site.url }}/_site/assets/austria-italy/7.jpg">
+![7](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/7.jpg?raw=true)
 
 Старинная.
 
-<img src="{{ site.url }}/_site/assets/austria-italy/8.jpg">
+![8](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/8.jpg?raw=true)
 
 Современная.
 
-<img src="{{ site.url }}/_site/assets/austria-italy/9.jpg">
+![9](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/9.jpg?raw=true)
 
 Разная, неоднозначная, но однозначно неповторимая и самобытная.
 
-<img src="{{ site.url }}/_site/assets/austria-italy/10.jpg">
+![10](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/10.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/austria-italy/11.jpg">
+![11](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/11.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/austria-italy/12.jpg">
+![12](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/12.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/austria-italy/13.jpg">
+![13](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/13.jpg?raw=true)
 
-<img src="{{ site.url }}/_site/assets/austria-italy/14.jpg">
+![14](https://github.com/kartamyshev/blog/blob/master/public/images/austria-italy/14.jpg?raw=true)
