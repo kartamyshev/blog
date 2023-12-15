@@ -1,6 +1,7 @@
 ---
 id: 5
 title:  "Другая Земля"
+published: false
 date:   "2014-12-19 15:04:00"
 ---
 

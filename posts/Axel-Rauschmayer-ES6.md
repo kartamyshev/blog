@@ -1,6 +1,7 @@
 ---
 id: 10
 title:  "Axel Rauschmayer EcmaScript 6 videos"
+published: false
 date:   "2015-03-15 11:52:03"
 ---
 

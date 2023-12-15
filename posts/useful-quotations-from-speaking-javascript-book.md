@@ -1,6 +1,7 @@
 ---
 id: 11
 title:  "Useful quotations from \"Speaking Javascript\" book "
+published: false
 date:   "2015-03-22 09:46:42"
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: 18
 title:  "Fink. Minsk. 01.11.2015"
+published: false
 date:   "2015-11-02 22:26:43"
 ---
 
