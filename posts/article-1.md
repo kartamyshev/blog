@@ -26,7 +26,7 @@ I will focus only on one **weakness** which is:
 
 ---
 
-And the derivation - a lot of CSS features, like grid, `:is`, `:where`, `:has` and many others are either hidden, abandoned or simply left behind the scenes.
+And the derivation - a lot of CSS features, like grid, `:is`, `:where`, `:has` and [many others](https://developer.chrome.com/blog/new-in-web-ui-io-2024) are either hidden, abandoned or simply left behind the scenes.
 
 I understand that cascades, inheritence, prioritization are complicated.
 There are a lot of rules, sometimes inconsistent, sometimes just difficult to understand because of various reasons.
@@ -36,11 +36,11 @@ Historically CSS was never complete and was always behind business and subsequen
 Maybe exactly designers were the ones who pushed specifications the most for better. 
 
 But please name at least one technology that is perfect? There is none.
-CSS is almost perfect for styling web pages. I don't think it's ever possible to find more laconical way for the language to describe how something should look like. Probably `yaml` would do better. But something similar can be easily achieved with [stylus](https://stylus-lang.com) (no advert) which was amazing tool at a time, clearly an underdog between css preprocessors.
+CSS is almost perfect for styling web pages. I don't think it's ever possible to find more concise and expressive way for the language to describe how something should look like. Probably `yaml` would do better. But something similar can be easily achieved with [stylus](https://stylus-lang.com) (no advert) - an amazing tool at a time, clearly an underdog between css preprocessors.
 
 Tailwind doesn't make person a better developer. It makes person somewhat faster developer.
 This isn't the same. I consider utility approach taken by tailwind team harmful for the industry.
-Since `tailwind` became a standart, we probably even don't understand that bloated html is top of the iceberg.
+Since `tailwind` became a standart, we probably don't even understand that bloated html is top of the iceberg.
 I wouldn't even mention separation of concerns here. Stating this makes me conservative dinosaur which I hope I am not.
 
 There is literally one downside in not using tailwind these days - maintaining separate css files. This is a big issue for developers incuding myself. Mostly because time is money. Tools are important. 
