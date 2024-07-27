@@ -5,9 +5,10 @@ published: true
 date:   "2024-07-22 13:12:09"
 ---
 
-This is an amazing set of tools, including autocompletion, built-in wide used classnames and mixins etc, developed by talented people. This comes, however, with a great cost. [Tailwind CSS](https://tailwindcss.com) adds another layer of complexity on the top of frontend development process which is already quite complex.
+[Tailwind CSS](https://tailwindcss.com) is an amazing set of tools, including autocompletion, built-in wide used classnames and mixins etc, developed by talented people. This comes, however, with a great cost. It adds another layer of complexity on the top of frontend development process which is already quite complex.
 
----
+
+
 
 Let's take a look at **Advantages**:
 - Faster, comparing to maintaining native CSS, development.
@@ -16,21 +17,79 @@ Let's take a look at **Advantages**:
 - Developing design systems is a breath of fresh air. 
 - No need to create omnipresent classes and mixins (same for every project). Good bye `sass`, `less` and alike.
 - Amazing error handling and autocompletion.
+- Unified developer-designer communication, everyone talks the same language (let's be honest, designers mostly don't know css which is fine)
 
----
+Context switching is hard. Having css in the same place as html is good. No context switching.
+We don't have to search for global css rules/mixins/rules all over the place. [Config file](https://tailwindcss.com/docs/configuration) is the only entrypoint.
+Often used styles are grouped and named clearly with meaningful defaults.
+
+
+
 
 There's not much to add to the strengths as they are pretty obvious and non negotiable. 
-I will focus only on one **weakness** which is: 
+Let's list **weaknesses** which are: 
 
-- Tailwind CSS doesn't usually add much CSS knowledge to the people using it.
+- Many CSS classes written in one line, each responsible for one or more property, can grow uncontrollably. 
+Sometimes they don't fit the screen.
+  
+  So, instead of regular 
+  ```css
+    .chat-notification {
+        display: flex;
+        align-items: center;
+        max-width: 24rem;
+        margin: 0 auto;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+  ```
+  we're doing
+  ```html
+  <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4" />
+  ```
+    This can be fixed by creating specfic classname in configuration file (whatever the syntax is)
 
----
+  ```js
+    module.exports = {
+        theme: {
+            chatNotification: {
+                // ...rules
+            },
+        },
+    };
+  ```
 
+  but then there is no difference with moving all rules under one classname in css file. 
+
+- If we move tailwind classes outside of html layout, autocompletion and tailwind error handling is lost.  
+    Example:
+    ```jsx
+    // All good
+
+    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4" />
+    ```  
+
+    
+    ```jsx
+    // Error prone, so it's easy to mistype
+
+    const getClassNames = (options) => "p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4";
+    <div className={getClassNames(options)} />
+    ```  
+
+- Tailwind CSS doesn't usually add much CSS knowledge to the people using it.  
 And the derivation - a lot of CSS features, like grid, `:is`, `:where`, `:has` and [many others](https://developer.chrome.com/blog/new-in-web-ui-io-2024) are either hidden, abandoned or simply left behind the scenes.
 
+I would like to focus on the last point more closely here.
+
 I understand that cascades, inheritence, prioritization are complicated.
-There are a lot of rules, sometimes inconsistent, sometimes just difficult to understand because of various reasons.
+There are a lot of rules, sometimes inconsistent, sometimes just difficult to comprehend because of various reasons.
 There is no error handling, you forget to add a semicolon and you get a blank screen. Not nice.
+
+It seems like we're trying to write styles anywhere but where they belong to - css in js, jss, tailwind etc.
+The only important parameter is development speed whatever other tradeoffs are. 
 
 Historically CSS was never complete and was always behind business and subsequently designer needs. 
 Maybe exactly designers were the ones who pushed specifications the most for better. 
@@ -45,7 +104,7 @@ I wouldn't even mention separation of concerns here. Stating this makes me conse
 
 There is literally one downside in not using tailwind these days - maintaining separate css files. This is a big issue for developers incuding myself. Mostly because time is money. Tools are important. 
 
-### Conclusion:
+### Conclusion
 
 Cascades are complicated. Writing maintainable CSS is complicated. If we join this with
 CSS not even considered a proper language to make fun of - we get unmaintainable CSS.
