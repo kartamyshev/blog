@@ -10,21 +10,21 @@ date:   "2024-07-22 13:12:09"
 
 
 
-Let's take a look at **Advantages**:
+Let's take a look at **advantages**:
 - Faster development (after certain time).
 - No need to switch between layout and style files.
 - No (or almost no) cascades.
 - Developing design systems is a breath of fresh air. 
 - No need to create omnipresent classes and mixins, same for every project. Good bye `sass`, `less` and alike.
 - Amazing error handling and autocompletion.
-- Unified developer-designer communication, everyone talks the same language.
+- Unified developer-designer communication, everyone speaks the same language.
 
 Context switching is hard. Having css in the same place as html is good in this regard.  
-We don't have to search for global css rules/mixins/rules all over the place. [Config file](https://tailwindcss.com/docs/configuration) is the only entrypoint.  
+We don't have to search for global css rules/mixins/variables all over the place. [Config file](https://tailwindcss.com/docs/configuration) is the only entrypoint.  
 Often used styles are grouped and named clearly with meaningful defaults.  
 There's not much to add to the strengths as they are pretty obvious and non negotiable.
 
-Let's list **weaknesses** which are: 
+Here are my subjective **weaknesses**: 
 
 - Many CSS classes written in one line, each responsible for one or more property, can grow uncontrollably. 
 Sometimes they don't fit the screen.
@@ -82,24 +82,24 @@ And the derivation - a lot of CSS features, like grid, `:is`, `:where`, `:has` a
 I would like to focus on the last point more closely here.
 
 I understand that cascades, inheritence, prioritization are complicated.
-There are a lot of rules, sometimes inconsistent, sometimes just difficult to comprehend because of various reasons.
-There is no error handling, you forget to add semicolon and you get a blank screen. Not nice.
+There are lots of rules, sometimes inconsistent, sometimes just difficult to comprehend because of various reasons.
+There is no error handling - you forget to add semicolon and you get a blank screen. Not nice.
 
 Historically CSS was never complete and was always behind business and subsequently designer needs. 
 Maybe exactly designers were the ones who pushed specifications the most for better. 
 
 But please name at least one technology that is perfect? There is none.
-CSS is almost perfect for styling web pages. I don't think it's ever possible to find more concise and expressive way for the language to describe how something should look like. Probably `yaml` would do better. But something similar can be easily achieved with [stylus](https://stylus-lang.com) (no advert) - an amazing tool in its time, clearly an underdog between css preprocessors.
+CSS is almost perfect for styling web pages. I don't think it's ever possible to find more concise and expressive way for the language to describe how something should look like. Probably `yaml` would do better. But something similar can be easily achieved with [stylus](https://stylus-lang.com) (no advert) - awesome tool in its time, clearly an underdog between css preprocessors.
 
 Tailwind doesn't make a person a better developer. It makes person somewhat faster developer.
 This isn't the same. I consider utility approach taken by tailwind team harmful for the industry.
 Since `tailwind` became a standart, we probably don't even understand that bloated html is only top of the iceberg.
 I wouldn't even mention separation of concerns here. Stating this makes me too conservative which I am not.
 
-It seems like we're trying to write styles anywhere but where they belong to - css in js, jss, tailwind etc.
+It seems like we're trying to write styles anywhere but where they belong to - css in js, jss, html etc.
 The only important parameter is development speed whatever other tradeoffs are. 
 
-There is literally one downside in not using tailwind these days - maintaining separate css files. This is a big issue for developers incuding myself. Mostly because time is money. Tools are important. 
+There is literally one big downside in not using tailwind these days - maintaining separate css files. This is a big issue for developers incuding myself. Mostly because time is money. Tools are important. 
 
 ### Conclusion
 
