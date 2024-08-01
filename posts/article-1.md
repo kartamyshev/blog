@@ -75,6 +75,7 @@ Sometimes they don't fit the screen.
     const getClassNames = (options) => "p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4";
     <div className={getClassNames(options)} />
     ```  
+- There are over 500 individual properties defined in CSS, it's hardly ever possible to remember syntax of subset of them, not talking about tailwind "versions". You can get used to searching in tailwind documentation, but that doesn't seem that natural as searching for native syntax (sometimes takes twice as much time).
 
 - Tailwind CSS doesn't usually add much CSS knowledge to the people using it.  
 And the derivation - a lot of CSS features, like grid, `:is`, `:where`, `:has` and [many others](https://developer.chrome.com/blog/new-in-web-ui-io-2024) are either hidden, abandoned or simply left behind the scenes.
@@ -89,7 +90,7 @@ Historically CSS was never complete and was always behind business and subsequen
 Maybe exactly designers were the ones who pushed specifications the most for better. 
 
 But please name at least one technology that is perfect? There is none.
-CSS is almost perfect for styling web pages. I don't think it's ever possible to find more concise and expressive way for the language to describe how something should look like. Probably `yaml` would do better. But something similar can be easily achieved with [stylus](https://stylus-lang.com) (no advert) - awesome tool in its time, clearly an underdog between css preprocessors.
+CSS is almost perfect for styling web pages. I don't think it's ever possible to find more concise and expressive way for the language to describe how something should look like. Probably `yaml` would do better. But something similar can be easily achieved with [stylus](https://stylus-lang.com) (no advert) - awesome tool in its time, clearly an underdog among css preprocessors.
 
 Tailwind doesn't make a person a better developer. It makes person somewhat faster developer.
 This isn't the same. I consider utility approach taken by tailwind team harmful for the industry.
