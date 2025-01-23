@@ -2,3 +2,4 @@
 .next
 .vscode
 /out
+.DS_Store

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'markdown-to-jsx';
 
 import Layout from "../../components/layout";
 import posts from "../../lib/posts";
@@ -49,7 +49,7 @@ const Post: FC<{post: Post}> = ({ post }) => {
         <p className="post-meta">{formattedDate}</p>
       </header>
       <article className={styles.postContent}>
-        <ReactMarkdown children={contentHTML} />
+        <Markdown children={contentHTML} />
       </article>
     </Layout>
   );
