@@ -36,45 +36,73 @@ When you read in the traditional LTR method, you finish a line and then move you
 
 However, if you alternate between LTR and RTL, the end of each RTL line is aligned with the start of the next LTR line. This means you won’t need to make a return sweep at the end of each line, saving you precious milliseconds as your eyes don’t need to go back to the left side of the page.
 
-### Here is a sample story
+--- 
 
-Elias woke up early one crisp morning, the sun barely peeking over the horizon, casting a soft <br />
-golden glow across the city. He could hear the faint hum of traffic, even at this early hour, as <br />
-people rushed to their destinations. The streets were wet from the overnight rain, and the air <br />
-smelled fresh and clean. He grabbed his jacket, pulled it tight around his shoulders, and stepped <br />
-outside. The cool breeze kissed his face, and he breathed in deeply, feeling the freshness of the <br />
-morning air. The city was slowly waking up, each street and building coming to life as the world <br />
-began its usual rhythm. Elias walked down the familiar path towards the corner café, where the <br />
-smell of freshly brewed coffee was already wafting into the street. The doorbell chimed as he <br />
-entered, and he nodded to the barista behind the counter, who smiled and greeted him by name. <br />
-It was one of those small moments that made the city feel like home. He ordered his usual black <br />
-coffee, took a seat by the window, and watched as the world outside continued to move in its <br />
-chaotic dance. People walked by, heads down, lost in their own thoughts. Some were rushing, <br />
-others strolling. A cyclist zoomed past, narrowly avoiding a puddle. The quiet hum of the café <br />
-provided a sense of calm amidst the hustle and bustle of the city. Elias took a sip of his coffee, <br />
-letting the warmth spread through him. There was something comforting about the routine of it <br /> 
-all, the predictability of the daily grind. It gave him a sense of purpose, something to anchor <br />
-himself to in the midst of the ever-moving city. <br />
+### Here is a sample story
+(*regular reading, I'll keep arrows everywhere so it's easier to keep track of the direction*)  
+
+→ Elias woke up early one crisp morning, the sun barely peeking over the horizon, casting a soft <br />
+→ golden glow across the city. He could hear the faint hum of traffic, even at this early hour, as <br />
+→ people rushed to their destinations. The streets were wet from the overnight rain, and the air <br />
+→ smelled fresh and clean. He grabbed his jacket, pulled it tight around his shoulders, and stepped <br />
+→ outside. The cool breeze kissed his face, and he breathed in deeply, feeling the freshness of the <br />
+→ morning air. The city was slowly waking up, each street and building coming to life as the world <br />
+→ began its usual rhythm. Elias walked down the familiar path towards the corner café, where the <br />
+→ smell of freshly brewed coffee was already wafting into the street. The doorbell chimed as he <br />
+→ entered, and he nodded to the barista behind the counter, who smiled and greeted him by name. <br />
+→ It was one of those small moments that made the city feel like home. He ordered his usual black <br />
+→ coffee, took a seat by the window, and watched as the world outside continued to move in its <br />
+→ chaotic dance. People walked by, heads down, lost in their own thoughts. Some were rushing, <br />
+→ others strolling. A cyclist zoomed past, narrowly avoiding a puddle. The quiet hum of the café <br />
+→ provided a sense of calm amidst the hustle and bustle of the city. Elias took a sip of his coffee, <br />
+→ letting the warmth spread through him. There was something comforting about the routine of it <br /> 
+→ all, the predictability of the daily grind. It gave him a sense of purpose, something to anchor <br />
+→ himself to in the midst of the ever-moving city. <br />
 
 ### Same story with alternating LTR and RTL
-(*keep in mind every other line goes backwards*)  
-Elias woke up early one crisp morning, the sun barely peeking over the horizon, casting a soft <br />
-sa ,ruoh ylrae siht ta neve ,ciffart fo muh tniaf eht raeh dluoc eH .ytic eht ssorca wolg nedlog <br />
-people rushed to their destinations. The streets were wet from the overnight rain, and the air <br />
-deppets dna ,sredluohs sih dnuora thgit ti dellup ,tekcaj sih debbarg eH .naelc dna hserf dellems <br />
-outside. The cool breeze kissed his face, and he breathed in deeply, feeling the freshness of the <br />
-dlrow eht sa efil ot gnimoc gnidliub dna teerts hcae ,pu gnikaw ylwols saw ytic ehT .ria gninrom <br />
-began its usual rhythm. Elias walked down the familiar path towards the corner café, where the <br />
-eh sa demihc llebrood ehT .teerts eht otni gnitfaw ydaerla saw eeffoc dewerb ylhserf fo llems <br />
-entered, and he nodded to the barista behind the counter, who smiled and greeted him by name. <br />
-kcalb lausu sih deredro eH .emoh ekil leef ytic eht edam taht stnemom llams esoht fo eno saw tI <br />
-coffee, took a seat by the window, and watched as the world outside continued to move in its <br />
-,gnihsur erew emoS .sthguoht nwo rieht ni tsol ,nwod sdaeh ,yb deklaw elpoeP .ecnad citoahc <br />
-others strolling. A cyclist zoomed past, narrowly avoiding a puddle. The quiet hum of the café <br />
-,eeffoc sih fo pis a koot sailE .ytic eht fo eltsub dna eltsuh eht tsdima mlac fo esnes a dedivorp <br />
-letting the warmth spread through him. There was something comforting about the routine of it <br />
-rohcna ot gnihtemos ,esoprup fo esnes a mih evag tI .dnirg yliad eht fo ytilibatciderp eht ,lla <br />
-himself to in the midst of the ever-moving city.
+(*keep in mind every other line goes backwards, including words. I'd recommend landscape mode if you're on mobile device*)  
+
+→ Elias woke up early one crisp morning, the sun barely peeking over the horizon, casting a soft <br />
+sa ,ruoh ylrae siht ta neve ,ciffart fo muh tniaf eht raeh dluoc eH .ytic eht ssorca wolg nedlog ←<br />
+→ people rushed to their destinations. The streets were wet from the overnight rain, and the air <br />
+deppets dna ,sredluohs sih dnuora thgit ti dellup ,tekcaj sih debbarg eH .naelc dna hserf dellems ←<br />
+→ outside. The cool breeze kissed his face, and he breathed in deeply, feeling the freshness of the <br />
+dlrow eht sa efil ot gnimoc gnidliub dna teerts hcae ,pu gnikaw ylwols saw ytic ehT .ria gninrom ←<br />
+→ began its usual rhythm. Elias walked down the familiar path towards the corner café, where the <br />
+eh sa demihc llebrood ehT .teerts eht otni gnitfaw ydaerla saw eeffoc dewerb ylhserf fo llems ←<br />
+→ entered, and he nodded to the barista behind the counter, who smiled and greeted him by name. <br />
+kcalb lausu sih deredro eH .emoh ekil leef ytic eht edam taht stnemom llams esoht fo eno saw tI ←<br />
+→ coffee, took a seat by the window, and watched as the world outside continued to move in its <br />
+,gnihsur erew emoS .sthguoht nwo rieht ni tsol ,nwod sdaeh ,yb deklaw elpoeP .ecnad citoahc ←<br />
+→ others strolling. A cyclist zoomed past, narrowly avoiding a puddle. The quiet hum of the café <br />
+,eeffoc sih fo pis a koot sailE .ytic eht fo eltsub dna eltsuh eht tsdima mlac fo esnes a dedivorp ←<br />
+→ letting the warmth spread through him. There was something comforting about the routine of it <br />
+rohcna ot gnihtemos ,esoprup fo esnes a mih evag tI .dnirg yliad eht fo ytilibatciderp eht ,lla ←<br />
+→ himself to in the midst of the ever-moving city.
+
+### One more experiment
+(*same as previous but keeping words accustomed and punctuation marks logically reversed being left hand side*)  
+→ Elias woke up early one crisp morning, the sun barely peeking over the horizon, casting a soft <br />
+as ,hour early this at even ,traffic of hum faint the hear could He .city the across glow golden ←<br />
+→ people rushed to their destinations. The streets were wet from the overnight rain, and the air <br />
+stepped and ,shoulders his around tight it pulled ,jacket his grabbed He .clean and fresh smelled ←<br />
+→ outside. The cool breeze kissed his face, and he breathed in deeply, feeling the freshness of the <br />
+world the as life to coming building and street each ,up waking slowly was city The .air morning ← <br />
+→ began its usual rhythm. Elias walked down the familiar path towards the corner café, where the <br />
+he as chimed doorbell The .street the into wafting already was coffee brewed freshly of smell ←<br />
+→ entered, and he nodded to the barista behind the counter, who smiled and greeted him by name. <br />
+black usual his ordered He .home like feel city the made that moments small those of one was It ←<br />
+→ coffee, took a seat by the window, and watched as the world outside continued to move in its <br />
+,rushing were Some .thoughts own their in lost ,down heads ,by walked People .dance chaotic ←<br />
+→ others strolling. A cyclist zoomed past, narrowly avoiding a puddle. The quiet hum of the café <br />
+,coffee his of sip a took Elias .city the of bustle and hustle the amidst calm of sense a provided ←<br />
+→ letting the warmth spread through him. There was something comforting about the routine of it <br /> 
+anchor to something ,purpose of sense a him gave It .grind daily the of predictability the ,all ←<br />
+→ himself to in the midst of the ever-moving city. <br />
+
+I'll leave it up to you which variant would be theoretically easier to read considering learning curve is in the past.  
+
+--- 
 
 ### Does This Work in Practice?
 
@@ -117,6 +145,3 @@ Moreover, learning to read in multiple directions could improve your cognitive f
 ### Final Thoughts
 
 The alternating LTR/RTL reading method is a fascinating approach that could help you save time and improve your reading efficiency. By eliminating return sweeps, you can reduce the time spent on each line of text, ultimately allowing you to read more quickly. While learning this technique takes time and practice, the long-term benefits could be significant.
-
-
-
