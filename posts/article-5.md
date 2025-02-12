@@ -118,6 +118,14 @@ Let’s look at the potential time saved:
 
 This might not sound like much, but over time, especially with longer texts, the time saved adds up. On average, you could save about **12%** of your total reading time when reading in alternating LTR/RTL direction.
 
+Moreover, in the last version where separate words are not reversed - it reduces Micro Eye Movements Within a Line.
+
+Normally, when reading LTR, your eyes move in small jumps (called **saccades**) across the line. But in this modified version, where the line direction is reversed but individual words are not, the eyes may actually need fewer saccades. Since words are not reversed but still flow in a consistent LTR or RTL direction, there is no need to adjust for an entirely new scanning pattern every line.
+
+This could lead to additional time savings, potentially reducing fixation duration per word.  
+If we assume this method reduces total eye movement time by an additional 5-8%, the total estimated time savings could be around **17-20%** compared to normal reading.  
+While this technique might theoretically improve speed, the brain has to retrain itself to process mirrored words quickly. This learning curve could be steeper than for alternating LTR/RTL reading.
+
 ## How Long Does It Take to Learn?
 
 Learning to alternate between LTR and RTL isn’t as simple as it sounds. Since you’re training your brain to read in both directions, it takes time to become proficient.
