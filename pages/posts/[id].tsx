@@ -27,6 +27,14 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
   };
 };
 
+const TableWrapper = ({ children }) => (
+  <div style={{ overflowX: 'auto' }}>
+    <table>
+      {children}
+    </table>
+  </div>
+);
+
 interface Post {
   contentHTML: string;
   date: Date;
@@ -35,7 +43,7 @@ interface Post {
   title: string;
 }
 
-const Post: FC<{post: Post}> = ({ post }) => {
+const Post: FC<{ post: Post }> = ({ post }) => {
   const { date, title, contentHTML } = post;
   const formattedDate = formatDate(date);
 
@@ -50,7 +58,14 @@ const Post: FC<{post: Post}> = ({ post }) => {
         <p className="post-meta">{formattedDate}</p>
       </header>
       <article className={styles.postContent}>
-        <Markdown children={contentHTML} />
+        <Markdown
+          children={contentHTML}
+          options={{
+            overrides: {
+              table: { component: TableWrapper }
+            }
+          }}
+        />
       </article>
     </Layout>
   );
