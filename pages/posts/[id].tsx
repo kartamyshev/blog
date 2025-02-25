@@ -43,6 +43,7 @@ const Post: FC<{post: Post}> = ({ post }) => {
     <Layout>
       <Head>
         <title>{title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <header className={styles.postHeader}>
         <h1 className={styles.postTitle}>{title}</h1>
